@@ -1,0 +1,11 @@
+{
+  "name": "com.tomoorganization.core",
+  "version": "1.0.0",
+  "displayName": "Tomo Core",
+  "description": "Adds useful base functionalities to reduce boilerplate code",
+  "unity": "2021.3",
+  "author": {
+    "name": "Tomoaki Itabashi",
+    "url": "https://github.com/TomoakiItabashi"
+  }
+}
