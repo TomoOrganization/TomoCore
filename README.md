@@ -1,16 +1,16 @@
 # Tomo Core
-### What is it?
+## What is it?
 A simple plugin that bring various basic functionalities that solves issues faced in majority of the projects (at least for me)
 1) solves race conditions for projects using singleton architecture without the need of relying execution order
 2) Bring easy number formating (e.g 12,345.67) to game while respecting client's locale and easy rounding to the desired decimal places
 3) Minor but useful extensions to commonly used struct and classes like transform and Vector
 
-### Race Condition
+## Race Condition
 At the base of Tomo Core is 2 important scripts
 1) Readyable Monobehaviour
 2) ControllerBase<T>
 
-#### ReadyableMonobehaviour
+### ReadyableMonobehaviour
 As the name suggest this brings the concept of "Readyable" to monobehaviour. 
 To implement, simply replace monobehaviour with ReadyableMonobehaviour class
 
@@ -82,7 +82,7 @@ public class ExampleDependencyScript : ReadyableMonobehaviour
 
 As you can see, scripts upstream do not have any concept of scripts downstream, and number of dependencies can scale up without issues.
 
-#### ControllerBase
+### ControllerBase
 Similar to readyable monobehaviours, this also allows for the easy setup of Controllers/Singletons via using generics. It creates a static instance like a normal controller
 Example
 ```
@@ -100,7 +100,7 @@ Similar to Readyable monobehaviours, script downstream can handle dependencies t
 
 Note: This does not make the script a DoNotDestroy and will not persist across scenes unless specified. If script is meant to be used as a local/scene controller, remember to handle destruction properly
 
-### Number formatting
+## Number formatting
 Namespace: Tomo.Core.Formatting;
 
 Handles formatting while taking into account locale
@@ -124,22 +124,22 @@ Output:
 1,234.4560 //4 S.F, adds additional 0 to fit
 ```
 
-### Extensions for common structs/classes
+## Extensions for common structs/classes
 Namespace: Tomo.Core.Extensions;
 
-#### GameObject
+### GameObject
 ```
 gameObject.SetLayerRecursively(int layerIndex);
 ```
 As name suggests, sets the layer of the gameobject specified and all the child via layer index
 
-#### Transform
+### Transform
 ```
 transform.GetAllChildren(bool shouldIncludeSelf);
 ```
 Gets all children of the specified transform recursively and return the children as List<Transform>. Will include self is bool is true, by default it is false.
 
-#### Vector2/Vector3
+### Vector2/Vector3
 ```
 new Vector3(1, 2, 3).XZZeroY(); // Returns a Vector3 with y; zeroed (1, 0, 3)
 new Vector3(1, 2, 3).ToXZ(); // Converts Vector3 into a Vector2 while maintaining XZ; (1, 3)
