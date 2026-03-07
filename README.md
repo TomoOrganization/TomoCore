@@ -5,7 +5,7 @@ A simple plugin that bring various basic functionalities that solves issues face
 2) Bring easy number formating (e.g 12,345.67) to game while respecting client's locale and easy rounding to the desired decimal places
 3) Minor but useful extensions to commonly used struct and classes like transform and Vector
 
-## Race Condition
+## Tomo Core - Readyables
 At the base of Tomo Core is 2 important scripts
 1) Readyable Monobehaviour
 2) ControllerBase<T>
