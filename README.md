@@ -118,10 +118,10 @@ NumberFormatUtil.GetFormattedNumber(1234.456f, 4);
 
 Output:
 1234.456 //no formatting, simply cast into string
-1,234.5 //1 S.F, rounds up
-1,234.46 //2 S.F, rounds up
-1,234.456 //3 S.F
-1,234.4560 //4 S.F, adds additional 0 to fit
+1,234.5 //1 Decimal place, rounds up
+1,234.46 //2 Decimal place, rounds up
+1,234.456 //3 Decimal place
+1,234.4560 //4 Decimal place, adds additional 0 to fit desired amount
 ```
 
 ## Extensions for common structs/classes
@@ -141,7 +141,7 @@ Gets all children of the specified transform recursively and return the children
 
 ### Vector2/Vector3
 ```
-new Vector3(1, 2, 3).XZZeroY(); // Returns a Vector3 with y; zeroed (1, 0, 3)
+new Vector3(1, 2, 3).XZZeroY(); // Returns a Vector3 with y zeroed; (1, 0, 3)
 new Vector3(1, 2, 3).ToXZ(); // Converts Vector3 into a Vector2 while maintaining XZ; (1, 3)
 new Vector2(1, 2).ToVector3XZ(); // Converts a Vector2 into Vector3 using XZ as X and Y; (1, 0, 2)
 ```
